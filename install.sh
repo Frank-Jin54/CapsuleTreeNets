@@ -10,9 +10,9 @@ echo ""
 
 PYTHON_VERSION_STRING=$(python -c "from platform import python_version; print(python_version())")
 echo "Available python version: $PYTHON_VERSION_STRING"
-if [[ ! $PYTHON_VERSION_STRING == 2.7* ]]; then
+if [[ ! $PYTHON_VERSION_STRING == 3.6* ]]; then
 
-    echo "Please make sure to use Python 2.7.*."
+    echo "Please make sure to use Python 3.6.*."
 
     echo "Aborting installation."
 

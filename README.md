@@ -1,21 +1,24 @@
-# Adaptive Neural Trees
+# Capsule Tree Neural Network
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
-This repository contains our PyTorch implementation of Adaptive Neural Trees (ANTs).
+This repository contains our PyTorch implementation of Capsule Tree Neural Network (CTNets).
 
-The code was written by [Ryutaro Tanno](https://rt416.github.io/) and 
-supported by [Kai Arulkumaran](http://kaixhin.com). 
+The code was written by [Zhiyong Jin]
 
-[Paper (ICML'19)](http://proceedings.mlr.press/v97/tanno19a.html) | [Video from London ML meetup](https://www.youtube.com/watch?v=v0bv0HTboOg&t=376s)
-<img src='images/cover.png' width="600px"/>
+
+
+
+
+
+
+
 
 
 # Prerequisites
 - Linux or macOS
-- Python 2.7
-- Anaconda >= 4.5 
-- CPU or NVIDIA GPU + CUDA 8.0 
+- Python 3.6
+
 
 # Installation
 
@@ -115,14 +118,8 @@ If you use this code for your research, please cite our ICML paper:
 }
 ```
 
-## Acknowledgements
-I would like to thank
-[Daniel C. Alexander](http://www0.cs.ucl.ac.uk/staff/d.alexander/) at University College London, UK, 
-[Antonio Criminisi](https://scholar.google.co.uk/citations?user=YHmzvmMAAAAJ&hl=en/) at Amazon Research, 
-and [Aditya Nori](https://www.microsoft.com/en-us/research/people/adityan/) at Microsoft Research Cambridge
-for their valuable contributions to this paper. 
-
-
-
-
+# fix a bug in torch if you run this codes with torch 1.2
+# change conv.py line 339 340 to 
+ return F.conv2d(input, weight, self.bias, self.stride,
+                        tuple([int(i) for i in self.padding]), self.dilation, self.groups)
 

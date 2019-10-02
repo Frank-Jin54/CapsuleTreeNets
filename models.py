@@ -746,7 +746,7 @@ class RouterGAPwithDoubleConv(nn.Module):
             if max(input_width, input_height)%2 ==0:
                 kernel_size += 1
  
-        padding = (kernel_size-1)/2 
+        padding = int((kernel_size-1)/2)
         self.conv1 = nn.Conv2d(input_nc, ngf, kernel_size=kernel_size, padding=padding)
         self.conv2 = nn.Conv2d(ngf, ngf, kernel_size=kernel_size, padding=padding)
         self.relu = nn.ReLU(inplace=True)
