@@ -589,7 +589,7 @@ class VGG13ConvPool(nn.Module):
         self.downsample = downsample        
         self.batch_norm = batch_norm
         self.conv1 = nn.Conv2d(
-            input_nc, ngf, kernel_size=kernel_size, padding=(kernel_size-1)/2,
+            input_nc, ngf, kernel_size=kernel_size, padding=int((kernel_size-1)/2),
         )
         self.conv2 = nn.Conv2d(ngf, ngf, kernel_size=kernel_size, padding=1)
         self.relu = nn.ReLU(inplace=True)
