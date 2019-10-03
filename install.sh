@@ -31,7 +31,7 @@ echo ""
 
 # install PyTorch
 echo "Installing the latest PyTorch for CUDA==8.0"
-conda install pytorch=0.3.0 torchvision cuda80 -c pytorch
+conda install pytorch=1.2.0 torchvision cuda80 -c pytorch
 
 echo ""
 
